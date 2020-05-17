@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	files, err := ioutil.ReadDir(".")
+	files, err := ioutil.ReadDir("/proc")
 	if err != nil {
 		log.Fatal(err)
 	}
