@@ -2,12 +2,19 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"io/ioutil"
+	"log"
 )
 
 func main() {
 
-	fmt.Println(os.Getpid())
-	fmt.Println(os.Getppid())
+	files, err := ioutil.ReadDir("/proc")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files {
+		fmt.Println(file.Name())
+	}
 
 }
