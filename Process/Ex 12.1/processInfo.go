@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
-	"syscall"
+	//"os"
+	//"syscall"
 )
 
 /*func fileStatFromInfoOs(fi os.FileInfo, flags *uint32, fileStat *FileStat) {
