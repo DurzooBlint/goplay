@@ -18,7 +18,8 @@ func main() {
 	for _, file := range files {
 		fileinfo, err := os.Stat(file.Name())
 		if err != nil {
-			log.Fatal(err)
+			fmt.Println("file does not exist")
+			continue
 		}
 		fmt.Println(fileinfo.Sys().(*syscall.Stat_t).Uid)
 	}
