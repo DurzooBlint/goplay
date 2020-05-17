@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"os"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 	}
 
 	for _, file := range files {
-		fmt.Println(file.Mode())
+		fmt.Println(os.Stat(file.Name()))
 	}
 
 }
