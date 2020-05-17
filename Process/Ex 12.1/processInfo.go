@@ -15,7 +15,10 @@ func main() {
 	}
 
 	for _, file := range files {
-		fileinfo, _ := os.Stat(file.Name())
+		fileinfo, err := os.Stat(file.Name())
+		if err != nil {
+			log.Fatal(err)
+		}
 		fmt.Println(fileinfo.Sys())
 		fmt.Println(fileinfo)
 	}
