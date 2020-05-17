@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"syscall"
 )
 
 func main() {
@@ -19,7 +20,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(fileinfo.Sys())
+		fmt.Println(fileinfo.Sys().(*syscall.Stat_t).Uid)
 		fmt.Println(fileinfo)
 		fmt.Println(os.Getuid())
 	}
