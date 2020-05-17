@@ -17,12 +17,12 @@ func main() {
 
 	for _, file := range files {
 		fmt.Println(file.Name())
-		fileinfo, err := os.Stat(file.Name())
+		fileNfo, err := os.Stat(file.Name())
 		if err != nil {
-			fmt.Println("file does not exist")
+			fmt.Println(err)
 			continue
 		}
-		fmt.Println(fileinfo.Sys().(*syscall.Stat_t).Uid)
+		fmt.Println(fileNfo.Sys().(*syscall.Stat_t).Uid)
 	}
 
 }
