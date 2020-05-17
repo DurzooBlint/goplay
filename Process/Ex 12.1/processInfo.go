@@ -21,8 +21,6 @@ func main() {
 			log.Fatal(err)
 		}
 		fmt.Println(fileinfo.Sys().(*syscall.Stat_t).Uid)
-		fmt.Println(fileinfo)
-		fmt.Println(os.Getuid())
 	}
 
 }
