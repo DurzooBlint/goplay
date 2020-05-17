@@ -21,6 +21,7 @@ func main() {
 		}
 		fmt.Println(fileinfo.Sys())
 		fmt.Println(fileinfo)
+		fmt.Println(os.Getuid())
 	}
 
 }
