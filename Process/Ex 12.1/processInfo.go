@@ -16,6 +16,7 @@ func main() {
 	}
 
 	for _, file := range files {
+		fmt.Println(file.Name())
 		fileinfo, err := os.Stat(file.Name())
 		if err != nil {
 			fmt.Println("file does not exist")
