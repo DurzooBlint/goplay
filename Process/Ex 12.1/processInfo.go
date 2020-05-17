@@ -8,13 +8,13 @@ import (
 
 func main() {
 
-	files, err := ioutil.ReadDir("/proc")
+	files, err := ioutil.ReadDir(".")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
-		fmt.Println(file.Name())
+		fmt.Println(file.Mode())
 	}
 
 }
